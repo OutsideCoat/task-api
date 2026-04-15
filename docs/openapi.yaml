@@ -5,6 +5,7 @@ info:
 servers:
   - url: http://localhost:3000
     description: Local development servers
+  - url: https://task-api-service-nbac.onrender.com
 tags:
   - name: Tasks
     description: Task-related endpoints
