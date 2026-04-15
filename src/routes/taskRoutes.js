@@ -1,10 +1,10 @@
 import express from 'express';
 import * as taskController from '../controllers/taskController.js';
-import { validateTask } from '../middleware/validateTask.js';
+import { validateTask, validateTaskFilters } from '../middleware/validateTask.js';
 
 const router = express.Router();
 
-router.get('/', taskController.getTasks);
+router.get('/', validateTaskFilters, taskController.getTasks);
 router.post('/', validateTask, taskController.createTask);
 
 export default router;
